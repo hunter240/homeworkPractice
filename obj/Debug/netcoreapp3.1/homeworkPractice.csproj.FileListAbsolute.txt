@@ -1,0 +1,13 @@
+C:\Users\Hunter\Code\homeworkPractice\bin\Debug\netcoreapp3.1\homeworkPractice.exe
+C:\Users\Hunter\Code\homeworkPractice\bin\Debug\netcoreapp3.1\homeworkPractice.deps.json
+C:\Users\Hunter\Code\homeworkPractice\bin\Debug\netcoreapp3.1\homeworkPractice.runtimeconfig.json
+C:\Users\Hunter\Code\homeworkPractice\bin\Debug\netcoreapp3.1\homeworkPractice.runtimeconfig.dev.json
+C:\Users\Hunter\Code\homeworkPractice\bin\Debug\netcoreapp3.1\homeworkPractice.dll
+C:\Users\Hunter\Code\homeworkPractice\bin\Debug\netcoreapp3.1\homeworkPractice.pdb
+C:\Users\Hunter\Code\homeworkPractice\obj\Debug\netcoreapp3.1\homeworkPractice.csprojAssemblyReference.cache
+C:\Users\Hunter\Code\homeworkPractice\obj\Debug\netcoreapp3.1\homeworkPractice.AssemblyInfoInputs.cache
+C:\Users\Hunter\Code\homeworkPractice\obj\Debug\netcoreapp3.1\homeworkPractice.AssemblyInfo.cs
+C:\Users\Hunter\Code\homeworkPractice\obj\Debug\netcoreapp3.1\homeworkPractice.csproj.CoreCompileInputs.cache
+C:\Users\Hunter\Code\homeworkPractice\obj\Debug\netcoreapp3.1\homeworkPractice.dll
+C:\Users\Hunter\Code\homeworkPractice\obj\Debug\netcoreapp3.1\homeworkPractice.pdb
+C:\Users\Hunter\Code\homeworkPractice\obj\Debug\netcoreapp3.1\homeworkPractice.genruntimeconfig.cache
