@@ -12,7 +12,12 @@ namespace homeworkPractice
     {
         static void Main(string[] args)
         {
-            
+            WriteLine("Welcome to the Lab Function Program!");
+            WriteLine(FunctionPicker(@"Which function would you like to run?
+            press '1' or type 'prime' to use the prime number generator.
+            press '2' or type 'tictactoe' to play a game of tic tac toe.
+            press '3' or type 'sticks' to play the game of sticks"));
+
             /*while (true)
             {
                 WriteLine("would you like to add anything to your file?");
@@ -27,11 +32,35 @@ namespace homeworkPractice
                     default:
                         break;
                 }
-            }*/    
+            }*/
             //WorkWithFiles();
             //NetWorking();
             //OutputFileSystemInfo();
             //WorkWithDrives();
+        }
+        public static string FunctionPicker(string prompt)
+        {
+            WriteLine(prompt);
+            string function = ReadLine().ToLower();
+            if (function == "1" || function == "prime")
+            {
+                return "PrimeFinderFunction";
+            }
+            if (function == "2" || function == "tictactoe")
+            {
+                return "TicTacToeFunction";
+            }
+            if (function == "3" || function == "sticks")
+            {
+                return "SticksFunction";
+            }
+            else
+            {
+                return FunctionPicker(@"You have entered an incorrect value.
+                press '1' or type 'prime' to use the prime number generator.
+                press '2' or type 'tictactoe' to play a game of tic tac toe.
+                press '3' or type 'sticks' to play the game of sticks");
+            }
         }
         static void OutputFileSystemInfo()
         {
