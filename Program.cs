@@ -3,7 +3,8 @@ using static System.Console;
 using static System.IO.Directory;
 using static System.Environment;
 using static System.IO.Path;
-//using System.Net;
+using System.IO;
+using System.Net;
 
 namespace homeworkPractice
 {
@@ -11,33 +12,10 @@ namespace homeworkPractice
     {
         static void Main(string[] args)
         {
+            //WorkWithFiles();
+            //NetWorking();
             //OutputFileSystemInfo();
-            WorkWithDrives();
-
-            /*WriteLine("Enter a valid web address: ");
-            string url = ReadLine();
-            if (string.IsNullOrWhiteSpace(url))
-            {
-                url = "https://world.episerver.com/cms/?q=pagetype";
-            }
-
-            var uri = new Uri(url);
-
-            WriteLine($"URL: {url}");
-            WriteLine($"Scheme: {uri.Scheme}");
-            WriteLine($"Port: {uri.Port}");
-            WriteLine($"Host: {uri.Host}");
-            WriteLine($"Path: {uri.AbsolutePath}");
-            WriteLine($"Query: {uri.Query}");
-
-            IPHostEntry entry = Dns.GetHostEntry(uri.Host);
-            
-            WriteLine($"{entry.HostName} has the following IP addresses:");
-            foreach (IPAddress address in entry.AddressList)
-            {
-                WriteLine($" {address}");
-            }
-            */
+            //WorkWithDrives();
 
         }
         static void OutputFileSystemInfo()
@@ -81,6 +59,71 @@ namespace homeworkPractice
                     WriteLine("{0,-30} | {1,-10}", drive.Name, drive.DriveType);
                 }
             }
+        }
+
+        static void WorkWithFiles()
+        {
+            var dir = Combine(GetFolderPath(SpecialFolder.Personal), "Code", "Chapter09", "OutputFiles");
+            CreateDirectory(dir);
+
+            string textFile = Combine(dir, "Dummy.txt");
+            string backupFile = Combine(dir, "Dummy.bak");
+            WriteLine($"Working with: {textFile}");
+
+
+            WriteLine($"Does it exist? {File.Exists(textFile)}");
+
+
+            StreamWriter textWriter = File.CreateText(textFile);
+            textWriter.WriteLine("Hello, C#!");
+            textWriter.Close();
+            WriteLine($"Does it exist? {File.Exists(textFile)}");
+
+
+            File.Copy(sourceFileName: textFile,
+            destFileName: backupFile, overwrite: true);
+            WriteLine(
+            $"Does {backupFile} exist? {File.Exists(backupFile)}");
+            Write("Confirm the files exist, and then press ENTER: ");
+            ReadLine();
+
+
+            File.Delete(textFile);
+            WriteLine($"Does it exist? {File.Exists(textFile)}");
+
+
+            WriteLine($"Reading contents of {backupFile}:");
+            StreamReader textReader = File.OpenText(backupFile);
+            WriteLine(textReader.ReadToEnd());
+            textReader.Close();
+        }
+        static void NetWorking()
+        {
+            WriteLine("Enter a valid web address: ");
+            string url = ReadLine();
+            if (string.IsNullOrWhiteSpace(url))
+            {
+                url = "https://world.episerver.com/cms/?q=pagetype";
+            }
+
+            var uri = new Uri(url);
+
+            WriteLine($"URL: {url}");
+            WriteLine($"Scheme: {uri.Scheme}");
+            WriteLine($"Port: {uri.Port}");
+            WriteLine($"Host: {uri.Host}");
+            WriteLine($"Path: {uri.AbsolutePath}");
+            WriteLine($"Query: {uri.Query}");
+
+            IPHostEntry entry = Dns.GetHostEntry(uri.Host);
+
+            WriteLine($"{entry.HostName} has the following IP addresses:");
+            foreach (IPAddress address in entry.AddressList)
+            {
+                WriteLine($" {address}");
+            }
+
+            
         }
     }
 }
