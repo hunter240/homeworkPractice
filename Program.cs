@@ -12,11 +12,26 @@ namespace homeworkPractice
     {
         static void Main(string[] args)
         {
+            
+            /*while (true)
+            {
+                WriteLine("would you like to add anything to your file?");
+                string option = ReadLine().ToLower();
+                switch(option)
+                {
+                    case "yes":
+                        StreamWriterFunction();
+                        break;
+                    case "no":
+                        return;
+                    default:
+                        break;
+                }
+            }*/    
             //WorkWithFiles();
             //NetWorking();
             //OutputFileSystemInfo();
             //WorkWithDrives();
-
         }
         static void OutputFileSystemInfo()
         {
@@ -122,8 +137,6 @@ namespace homeworkPractice
             {
                 WriteLine($" {address}");
             }
-
-            
         }
     }
 }
